@@ -6,9 +6,15 @@
         <meta http-e
         quiv="x-ua-compatible" content="ie=edge">
         <title>Natal BTS & BAHTRAKU </title>
-        <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta property="og:image" content="/assets/foto/foto.png" />
+        <meta property="og:locale" content="id_ID" />
+        <meta property="og:type" content="Undangan Perayaan Natal" />
+        <meta property="og:title" content="NATAL BTS & BAHTRAKU" />
+        <meta property="og:description" content="BTS & BAHTRAKU - Undangan Perayaan Natal" />
+        <meta property="og:url" content="https://www.yaswarau.id/natal-bts-bahtraku" />
+        <meta property="og:site_name" content="NATAL BTS & BAHTRAKU" />
+        <meta property="og:image" content="https://www.yaswarau.id/natal-bts-bahtraku/assets/foto/foto.png" />
+    <link rel="shortcut icon" type="image/png" href="assets/foto/favicon-yaswarau.png">
 
         <link rel="manifest" href="site.webmanifest">
 		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
@@ -199,8 +205,8 @@
                         <p class="text-opening" >Bapak/Ibu/Saundara/I </p>
                         <div class="card" style="width: 18rem; margin-bottom: 11px;">
                             <div class="card-body">
-                                <p class="card-text rounded-0 font-weight-bold text-black">
-                                   Bpk.
+                                <p class="card-text rounded-0 font-weight-bold text-black" id="tamu">
+                                  
                                 </p>
                             </div>
                         </div>
@@ -217,7 +223,7 @@
         <div class="d-none" id="isi">
             <!-- <div> -->
                 <section id="undangan" class="container" style="background-image: url('assets/foto/bg-3.png'); width: 100%; background-repeat: no-repeat; background-size: cover; padding-top: 10%; padding-bottom:10px; top: 100px;">
-                    <div class="circle-caption" id="lokasi" style="margin-top: 60%;" >
+                    <div class="circle-caption" id="lokasi" style="margin-top: 70%;" >
                         <div class="row text-center " >
                             <div class="col" >
                                 <h1 class="teks-1">Shalom</h1>
@@ -246,6 +252,14 @@
                                 </div>
                                 <br><br>
                                 <a href="https://maps.app.goo.gl/5EbW6VgFkZUQvcbW9" target="_blank" class="btn btn-buka"> Peta Lokasi</a>
+
+
+                                <p class="teks-2-1 mb-2 mt-4" style="word-spacing: 10px; font-size: 20px;"  > 
+                                    Suatu sukacita apabila Bapak/Ibu/Saudara/i 
+berkenaan hadir dan merayakan Natal bersama kami. 
+Terimakasih, Tuhan Memberkati
+
+                                </p>   
                             </div>
                         </div>
                         <center>
@@ -278,7 +292,7 @@
 
 
                 <div id="donasi" class="container" style="background-image: url('assets/foto/bg-3.png'); width: 100%; background-repeat: no-repeat; background-size: cover; padding-top: 10%; padding-bottom:10px">
-                    <div class="circle-caption" style="margin-top: 60%;">
+                    <div class="circle-caption" style="margin-top: 70%;" >
                         <center>
                             <h1 class="teks-1">Donasi</h1>
                             <p class="" style="color: #000000; font-size: 20px;">Donasi Anda akan membantu banyak suku untuk dapat memahami Firman Tuhan dalam bahasa mereka</p>
@@ -310,7 +324,7 @@
 
              
                 <div id="ucapan" class="container" style="background-image: url('assets/foto/bg-3.png'); width: 100%; background-repeat: no-repeat; background-size: cover; padding-top: 10%; padding-bottom:30px">
-                    <div class="circle-caption text-center" data-aos="zoom-out-up" data-aos-duration="3000" style="margin-top: 60%; margin-bottom: 60%;">
+                    <div class="circle-caption text-center" data-aos="zoom-out-up" data-aos-duration="3000" style="margin-top: 80%; margin-bottom: 60%;">
                             <img src="assets/foto/logo2.png" class="img-fluid" width="300" alt=""  style="margin-top: 30px;">
                             
                             <h1>Selamat Hari Natal</h1>
@@ -525,6 +539,15 @@
 
     <!-- Function untuk insert data -->
     
-     
+    <script>
+        let url = window.location.href;
+              let cut = url.substr(46);
+              if (cut === "") {
+                  document.getElementById("tamu").innerHTML = `Nama tamu`;
+              } else {
+                  let nama = cut.replace(/-/g, " ");
+                  document.getElementById("tamu").innerHTML = nama;
+              }
+      </script>
     </body>
 </html>
